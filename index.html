@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= 480px, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Power Fertilizers</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-image: url('https://i.postimg.cc/sXxGBnbq/pexels-oguz-karademir-591747508-17693614.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    h1 {
+      margin: 10px;
+      text-align: center;
+      font-size: clamp(40px, 8vw, 100px);
+    }
+
+    h2 {
+      margin: 10px;
+      text-align: center;
+      font-size: clamp(30px, 5vw, 60px);
+    }
+
+    h6 {
+      margin: 10px;
+      text-align: center;
+      font-size: clamp(20px, 3vw, 30px);
+      color: red;
+    }
+    
+footer {
+      text-align: auto;
+      padding: 10px;
+      background-size: auto;
+      border-top: 1px solid #ccc;
+   
+    }     
+    .search-bar {
+      margin: 20px auto;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #cartDetails {
+      margin: 20px auto;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #E0E0E0;
+      text-align: center;
+      font-size: 20px;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      text-align: center;
+      background-color: #ccc;
+    
+    }
+
+    .product img {
+      width: 50%;
+      height: auto;
+      border-radius: 5px;
+      
+    }
+
+    .product button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product .addCartButton {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>POWER FERTILIZERS</h1>
+    <h2>Grow Better with Our Fertilizers</h2>
+    <p>High-quality fertilizers to boost your crop yield.</p>
+    <div class="search-bar">
+      <input type="text" id="searchBar" placeholder="Search for products... / उत्पादने शोधा...">
+      <button id="searchButton">Search/शोधा</button>
+    </div>
+  </header>
+  <h6>🏠 Free Home Delivery ------ 💰 Cash On Delivery</h6>
+
+<!-- Customer Details Section --> 
+  <section id="customerDetails" style="max-width: 1000px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); text-align: center; background: #f9f9f9;">
+    <h5 style="margin-bottom: 15px; font-size: 18px; color: #333;">Customer Details / ग्राहकाचे तपशील</h5>
+    <input type="text" id="customerName" placeholder="Your Name / तुमचे नाव" style="width: 95%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <input type="text" id="customerAddress" placeholder="Your Address / तुमचा पत्ता" style="width: 95%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    <input type="text" id="customerNumber" placeholder="Your Number / तुमचा नंबर" style="width: 95%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;">
+    <button id="saveCustomerDetails" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; width: 30%;">Save Details / तपशील जतन करा</button>
+</section>
+
+<!-- Products Sections -->
+  <section id="products">
+    <h4 style="text-align: center; font-size: 40px; margin: 10px;">Our Products</h4>
+    <div class="product-grid">
+      
+<!-- Products 01 -->     
+      <div class="product" data-name="Amino Acids 80% Powder" data-price="995">
+      <img src="https://i.ibb.co/RS4gKg8/Amino-Acids.jpg" <style>
+        </style>
+        <h3>Amino Acids 80% Powder</h3>
+        <p>Price: ₹995/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+        </div>
+  
+<!-- Products 02 -->     
+    <div class="product" data-name="Potassium Fulvic Acids 80% Powder" data-price="300">
+       <img src="https://i.ibb.co/KXymVDc/Potassium-Fulvic-Acids.png" alt="Potassium-Fulvic-Acids" border="0"></a>
+        <h3>Potassium Fulvic Acids 80% Powder</h3>
+        <p>Price: ₹720/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+        </div>
+
+<!-- Products 03 -->   
+      <div class="product" data-name="Chelated Mix Micronutrients EDTA Powder" data-price="1200">
+        <img src="https://i.ibb.co/Y0L1pxQ/Chelated-Mix-Micronutrients-EDTA.png" alt="Chelated-Mix-Micronutrients-EDTA" border="0"></a>
+        <h3>Chelated Mix Micronutrients EDTA Powder</h3>
+        <p>Price: ₹1200/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+
+<!-- Products 04 -->   
+      <div class="product" data-name="Micronutrients EDTA Powder" data-price="850">
+      <img src="https://i.ibb.co/rQDJsww/Micronutrients-EDTA.png" alt="Micronutrients-EDTA" border="0"></a>
+        <h3>Micronutrients EDTA Powder</h3>
+        <p>Price: ₹850/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+
+<!-- Products 05 --> 
+      <div class="product" data-name="Ferrous Chelated 12% EDTA Powder" data-price="2000">
+        <img src="https://i.ibb.co/s9xQYk9/Ferrus-Chelated.png" alt="Ferrus-Chelated" border="0"></a>
+        <h3>Ferrous Chelated 12% EDTA Powder</h3>
+        <p>Price: ₹2000/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+<!-- Products 06 --> 
+      <div class="product" data-name="Zinc Chelated 12% EDTA Powder" data-price="1000">
+        <img src="https://i.ibb.co/WDJs8rv/Zinc-Chelated.png" alt="Zinc-Chelated" border="0"></a>
+        <h3>Zinc Chelated 12% EDTA Powder</h3>
+        <p>Price: ₹1000/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+<!-- Products 07 --> 
+      <div class="product" data-name="Boron 20% Powder" data-price="350">
+       <img src="https://i.ibb.co/dpqgHLW/Boron.png" alt="Boron" border="0"></a>
+        <h3>Boron 20% Powder</h3>
+        <p>Price: ₹350/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+<!-- Products 08 --> 
+      <div class="product" data-name="Potassium Humate Shiny Flakes 98%" data-price="700">
+        <img src="https://i.ibb.co/xhj5wmS/Potassium-Humate.png" alt="Potassium-Humate" border="0"></a>
+        <h3>Potassium Humate Shiny Flakes 98%</h3>
+        <p>Price: ₹700/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+<!-- Products 09 --> 
+      <div class="product" data-name="Calcium Nitrate" data-price="88">
+       <img src="https://i.ibb.co/ZdzF1SY/Calcium-Nitrate.png" alt="Calcium-Nitrate" border="0"></a>
+        <h3>Calcium Nitrate</h3>
+        <p>Price: ₹88/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+<!-- Products 10 --> 
+      <div class="product" data-name="Green Seaweeds Extracts Powder" data-price="1510">
+       <img src="https://i.ibb.co/Jmn3yWT/Green-Seaweeds-Extracts.png" alt="Green-Seaweeds-Extracts" border="0"></a>
+        <h3>Green Seaweeds Extracts Powder</h3>
+        <p>Price: ₹1510/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+<!-- Products 11 --> 
+      <div class="product" data-name="Sulfur Powder" data-price="200">
+        <img src="https://i.ibb.co/7nXmp9g/Sulfur.png" alt="Sulfur" border="0"></a>
+        <h3>Sulfur Powder</h3>
+        <p>Price: ₹200/kg</p>
+        <input type="number" placeholder="Quantity">
+        <button class="addCartButton">Add to Cart</button>
+       </div>
+
+<!-- Products 12 --> 
+    <div class="product" data-name="00:00:50" data-price="125">
+      <img src="https://i.ibb.co/5LLfW9k/00-00-50.png" alt="00-00-50" border="0"></a>
+      <h3>00:00:50</h3>
+      <p>Price: ₹100/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+      </div>
+  
+<!-- Products 13 --> 
+    <div class="product" data-name="19:19:19" data-price="112">
+     <img src="https://i.ibb.co/V94CCTt/19-19-19.png" alt="19-19-19" border="0"></a>
+      <h3>19:19:19</h3>
+      <p>Price: ₹112/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+    </div>
+  
+<!-- Products 14 --> 
+    <div class="product" data-name="20:20:20" data-price="00">
+     <img src="https://i.ibb.co/FgDDdg0/20-20-20.png" alt="20-20-20" border="0"></a>
+      <h3>20:20:20</h3>
+      <p>Price: ₹80/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+     </div> 
+
+<!-- Products 15 --> 
+    <div class="product" data-name="13:40:13" data-price="80">
+      <img src="https://i.ibb.co/YjgdtnC/13-40-13.png" alt="13-40-13" border="0"></a>
+      <h3>13:40:13</h3>
+      <p>Price: ₹145/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+      </div>
+
+<!-- Products 16 --> 
+    <div class="product" data-name="13:00:45" data-price="125">
+      <img src="https://i.ibb.co/RPL705h/13-00-45.png" alt="13-00-45" border="0"></a>
+      <h3>13:00:45</h3>
+      <p>Price: ₹125/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+      </div>
+
+<!-- Products 17 --> 
+    <div class="product" data-name="12:61:00" data-price="130">
+     <img src="https://i.ibb.co/1vFRxkH/12-61-00.png" alt="12-61-00" border="0"></a>
+      <h3>12:61:00</h3>
+      <p>Price: ₹130/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+      </div>
+
+<!-- Products 18 --> 
+    <div class="product" data-name="00:60:20" data-price="200">
+      <img src="https://i.ibb.co/DbmJhpq/00-60-20.png" alt="00-60-20" border="0"></a>
+      <h3>00:60:20</h3>
+      <p>Price: ₹200/kg</p>
+      <input type="number" placeholder="Quantity">
+     </select>
+      <button class="addCartButton">Add to Cart</button>
+      </div>
+
+<!-- Products 19 --> 
+    <div class="product" data-name="00:52:34" data-price="160">
+      <img src="https://i.ibb.co/khL2PzM/00-52-34.png" alt="00-52-34" border="0"></a>
+      <h3>00:52:34</h3>
+      <p>Price: ₹160/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+      </div>
+
+<!-- Products 20 --> 
+    <div class="product" data-name="Copper Sulfate" data-price="900">
+      <img src="https://i.ibb.co/xHmPNxS/Copper-Sulfate.png" alt="Copper-Sulfate" border="0"></a>
+      <h3>Copper Sulfate</h3>
+      <p>Price: ₹900/kg</p>
+      <input type="number" placeholder="Quantity">
+      </select>
+      <button class="addCartButton">Add to Cart</button>
+      </div>
+  </section>
+
+<!-- Cart Details Section --> 
+  <section id="cartDetails" style="max-width: 1000px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); background: #f9f9f9;">
+    <h3 style="text-align: center;">Cart Details / कार्टचे तपशील</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; text-align: center;">
+      <thead>
+        <tr style="background-color:#fafafa;">
+          <th style="padding: 10px; border: 1px solid #ccc;">Item Name</th>
+          <th style="padding: 10px; border: 1px solid #ccc;">Quantity in Kg</th>
+          <th style="padding: 10px; border: 1px solid #ccc;">Unit Price/Kg (₹)</th>
+          <th style="padding: 10px; border: 1px solid #ccc;">Total Price (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="cartItems">
+        <tr>
+          <td colspan="5" style="padding: 10px; border: 1px solid #ccc; text-align: center;">No items in the cart</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="text-align: right; font-size: 20px; margin-top: 10px;">
+      Total Amount: ₹<span id="cartTotal">0.00</span>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button id="PlaceOrdertButton" style="background-color: #28a745; color: white; border: none; padding: 8px 15px; font-size: 14px; border-radius: 5px; cursor: pointer; margin-right: 10px;">Place Order / ऑर्डर द्या</button>
+      <button id="clearCartButton" style="background-color: #dc3545; color: white; border: none; padding: 8px 15px; font-size: 14px; border-radius: 5px; cursor: pointer;">Clear Cart / कार्ट साफ करा</button>
+    </div>
+  </section> 
+
+<!-- Footer Section -->
+  <footer style="background-image: url('https://i.ibb.co/C2cFmw6/pexels-oguz-karademir-591747508-17693614-Copy.jpg'); background-size: cover; background-color: #87CEEB; padding: 10px; text-align: center;">
+    <p>&copy; 2025 Power Fertilizers. All rights reserved.</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+
